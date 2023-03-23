@@ -1,0 +1,10 @@
+Step 1: From your project repository, check out a new branch and test the changes.
+
+git checkout -b Hridis-main main
+git pull https://github.com/Hridis/Merge_Pull-Tutorial.git main
+
+Step 2: Merge the changes and update on GitHub.
+
+git checkout main
+git merge --no-ff Hridis-main
+git push origin main
