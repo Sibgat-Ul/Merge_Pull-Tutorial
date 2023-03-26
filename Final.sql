@@ -53,3 +53,7 @@ ALTER TABLE `takes` ADD CONSTRAINT `takes_ibfk_1` FOREIGN KEY (`student_id`, `st
 
 -- AddForeignKey
 ALTER TABLE `teaches` ADD CONSTRAINT `teaches_ibfk_1` FOREIGN KEY (`instructor_id`) REFERENCES `instructor`(`id`) ON DELETE CASCADE ON UPDATE RESTRICT;
+
+ALTER TABLE `course` DROP PRIMARY KEY,
+    MODIFY `course_id` BIGINT NOT NULL AUTO_INCREMENT,
+    ADD PRIMARY KEY (`course_id`);
