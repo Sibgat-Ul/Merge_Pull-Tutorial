@@ -57,3 +57,6 @@ ALTER TABLE `teaches` ADD CONSTRAINT `teaches_ibfk_1` FOREIGN KEY (`instructor_i
 ALTER TABLE `course` DROP PRIMARY KEY,
     MODIFY `course_id` BIGINT NOT NULL AUTO_INCREMENT,
     ADD PRIMARY KEY (`course_id`);
+
+ALTER TABLE student ADD COLUMN email varchar(30) UNIQUE;
+ALTER TABLE instructor ADD COLUMN email varchar(30) UNIQUE;
