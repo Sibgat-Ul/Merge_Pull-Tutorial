@@ -58,11 +58,28 @@ ALTER TABLE `course` DROP PRIMARY KEY,
     MODIFY `course_id` BIGINT NOT NULL AUTO_INCREMENT,
     ADD PRIMARY KEY (`course_id`);
     
--- Create Table 
-    CREATE TABLE  'time_slot' (
-        time_slot_id BIGINT NOT NULL,
-        day BIGINT NOT NULL,
-        start_time BIGINT NOT NULL,
-        end_time  BIGINT NOT NULL
-        
-        PRIMARY KEY('time_slot', 'day', 'start_time')
+-- Inserting values
+INSERT INTO course(course_id, title)
+VALUES (101, 'Intro to Computer Science'),
+(102, 'Calculus I'),
+(103, 'English Composition');
+
+INSERT INTO instructor(id, name, password)
+VALUES ('201', 'David Brown', 'popi123'),
+(202, 'Karen White', 'runalone543'),
+(203, 'Steven Lee', 'inolo090');
+
+INSERT INTO student(id, name, password)
+VALUES (101, 'John Smith', 'Comcat57'),
+(102, 'Jane Doe', 'Matlib32'),
+(103, 'Alice Johnson', 'Englob29')
+
+INSERT INTO takes(id, course_id, title, student_id, student_name)
+VALUES (910, 102, 'Calculus I', 101, 'John Smith'),
+(920, 102, 'Calculus I', 102, 'Jane Doe'),
+(921, 103, 'English Composition', 103, 'Alice Johnson')
+
+INSERT INTO teches (id, course_id, instructor_id)
+
+
+
