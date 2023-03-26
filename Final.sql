@@ -57,3 +57,12 @@ ALTER TABLE `teaches` ADD CONSTRAINT `teaches_ibfk_1` FOREIGN KEY (`instructor_i
 ALTER TABLE `course` DROP PRIMARY KEY,
     MODIFY `course_id` BIGINT NOT NULL AUTO_INCREMENT,
     ADD PRIMARY KEY (`course_id`);
+    
+-- Create Table 
+    CREATE TABLE  'time_slot' (
+        time_slot_id BIGINT NOT NULL,
+        day BIGINT NOT NULL,
+        start_time BIGINT NOT NULL,
+        end_time  BIGINT NOT NULL
+        
+        PRIMARY KEY('time_slot', 'day', 'start_time')
