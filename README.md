@@ -7,7 +7,7 @@
   - Commit/Push to YOUR REPOSITORY
   - Create pull request
   
-! INSTALL GIT CLI and GITHUB CLI
+### !!! INSTALL GIT CLI and GITHUB CLI
 # Merge_Pull-Tutorial
 This repository is made only for learning and testing pull and merge requests.
 
